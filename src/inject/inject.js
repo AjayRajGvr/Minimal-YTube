@@ -1,10 +1,9 @@
+
 chrome.extension.sendMessage({}, function(response) {
 	var readyStateCheckInterval = setInterval(function() {
-	if (document.readyState === "complete") {
-		clearInterval(readyStateCheckInterval);
+		do{
+			checkpnt= 0;
 
-		// ----------------------------------------------------------
-		// This part of the script triggers when page is done loading
 		console.log("Hello. This message was sent from scripts/inject.js");
 		var intime = setInterval((function(){
 			var em= document.querySelector('#guide-content');
@@ -35,11 +34,14 @@ chrome.extension.sendMessage({}, function(response) {
 			clearInterval(intime);
 			sd.parentNode.removeChild(sd);
 		}
+		window.onhashchange = function() { 
+		checkpnt = 1;
+	   }
 
 		}), 500);
 
 		// ----------------------------------------------------------
+}while(checkpnt==1);
 
-	}
 	}, 10);
-});
+}); 
