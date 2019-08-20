@@ -1,1 +1,2 @@
 # Minimal-YTube
+Have you been searching for something on YouTube and got stuck in the infinite suggestions by YouTube and forget what you were doing? Look no further,this chrome extension will eradicate all youtube suggestions field and helps you to focus on the matter in hand. (NB:the YouTube UI will be minimal to the core and if you are a regular guy who is watching songs and stuff on youtube  this is not for you.)
